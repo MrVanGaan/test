@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #canvas {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .speed-control {
+            margin-top: 15px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input[type="range"] {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bouncing Ball Animation</h1>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="5">
+    </div>
+    <script src="ball.js"></script>
+</body>
+</html> 
